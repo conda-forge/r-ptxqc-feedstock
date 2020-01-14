@@ -34,10 +34,10 @@ requirements:
     - r-kableextra
     - r-knitr >=1.10
     - r-plyr
-    - r-proto
     - r-reshape2
     - r-rmarkdown
     - r-seqinr
+    - r-upsetr
     - r-yaml
   run:
     - r-base
@@ -50,10 +50,10 @@ requirements:
     - r-kableextra
     - r-knitr >=1.10
     - r-plyr
-    - r-proto
     - r-reshape2
     - r-rmarkdown
     - r-seqinr
+    - r-upsetr
     - r-yaml
 
 test:
