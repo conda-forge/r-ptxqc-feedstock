@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PTXQC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PTXQC/PTXQC_{{ version }}.tar.gz
-  sha256: 7cd28f175b6e88953cd7da30a990c4b2abab2e9b6f042740ad82595975c9cbcb
+  sha256: ac13e848cb8afb6290b34e7d7056b0de4c11d0ef5b7483eaf8ea2de7644e2cea
 
 build:
   merge_build_host: True  # [win]
