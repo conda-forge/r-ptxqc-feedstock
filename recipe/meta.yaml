@@ -1,4 +1,4 @@
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PTXQC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PTXQC/PTXQC_{{ version }}.tar.gz
-  sha256: 80585ee36de928a9f387e9ce6ac704d3959f213ab44a78271c250e696dfddcfb
+  sha256: 1f7a43f96f1f6a7f44a4d4d81bc35bd5388bcb08468ee13d98e83fadcd77e03c
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -64,8 +64,7 @@ test:
 about:
   home: https://github.com/cbielow/PTXQC
   license: GPL-2
-  summary: "Generates Proteomics (PTX) quality control (QC) reports for shotgun LC-MS data analyzed with the  MaxQuant software suite. Reports are customizable (target\
-    \ thresholds, subsetting) and available in HTML or PDF format. Published in J. Proteome Res., Proteomics Quality Control: Quality Control Software for MaxQuant\
+  summary: "Generates Proteomics (PTX) quality control (QC) reports for shotgun LC-MS data analyzed with the  MaxQuant software suite. Reports are customizable (target thresholds, subsetting) and available in HTML or PDF format. Published in J. Proteome Res., Proteomics Quality Control: Quality Control Software for MaxQuant\
     \ Results (2015) 'doi:10.1021/acs.jproteome.5b00780'."
   license_family: GPL2
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
