@@ -3,7 +3,7 @@ About r-ptxqc
 
 Home: https://github.com/cbielow/PTXQC
 
-Package license: GPL-2
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ptxqc-feedstock/blob/master/LICENSE.txt)
 

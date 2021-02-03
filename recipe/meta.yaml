@@ -1,4 +1,4 @@
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PTXQC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PTXQC/PTXQC_{{ version }}.tar.gz
-  sha256: 605c34691d321b67eab06a581f4445d749ddfdda55b5c0aab895709b04ba7274
+  sha256: 0bbe4b03809b0209f9c021e3a5f69d9627893f3f435a758628f76d5ad8e0bfa4
 
 build:
   merge_build_host: true  # [win]
@@ -26,34 +26,36 @@ requirements:
   host:
     - r-base
     - r-rcolorbrewer
+    - r-upsetr
     - r-data.table
     - r-ggdendro
     - r-ggplot2 >=2.2
-    - r-gridextra
     - r-gtable
+    - r-jsonlite
     - r-kableextra
     - r-knitr >=1.10
+    - r-ontologyindex
     - r-plyr
     - r-reshape2
     - r-rmarkdown
     - r-seqinr
-    - r-upsetr
     - r-yaml
   run:
     - r-base
     - r-rcolorbrewer
+    - r-upsetr
     - r-data.table
     - r-ggdendro
     - r-ggplot2 >=2.2
-    - r-gridextra
     - r-gtable
+    - r-jsonlite
     - r-kableextra
     - r-knitr >=1.10
+    - r-ontologyindex
     - r-plyr
     - r-reshape2
     - r-rmarkdown
     - r-seqinr
-    - r-upsetr
     - r-yaml
 
 test:
@@ -63,11 +65,12 @@ test:
 
 about:
   home: https://github.com/cbielow/PTXQC
-  license: GPL-2
+  license: BSD-3-Clause
   summary: "Generates Proteomics (PTX) quality control (QC) reports for shotgun LC-MS data analyzed with the  MaxQuant software suite. Reports are customizable (target thresholds, subsetting) and available in HTML or PDF format. Published in J. Proteome Res., Proteomics Quality Control: Quality Control Software for MaxQuant\
     \ Results (2015) 'doi:10.1021/acs.jproteome.5b00780'."
-  license_family: GPL2
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_family: BSD
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause
 
 extra:
   recipe-maintainers:
