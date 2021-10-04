@@ -1,4 +1,4 @@
-{% set version = "1.0.10" %}
+{% set version = "1.0.11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PTXQC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PTXQC/PTXQC_{{ version }}.tar.gz
-  sha256: 31d34eaac9a0a46890c3d4f96705c54f824e958e30e6ee118aec9fa2720934d2
+  sha256: efcaf7e22220c816ebcac6d2af9bcbc53967ba162fabf07a77c4c12473ac0f97
 
 build:
   merge_build_host: true  # [win]
@@ -23,8 +23,11 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-r6
+    - r-r6p
     - r-rcolorbrewer
     - r-upsetr
     - r-data.table
@@ -39,9 +42,12 @@ requirements:
     - r-reshape2
     - r-rmarkdown
     - r-seqinr
+    - r-xml2
     - r-yaml
   run:
     - r-base
+    - r-r6
+    - r-r6p
     - r-rcolorbrewer
     - r-upsetr
     - r-data.table
@@ -56,6 +62,7 @@ requirements:
     - r-reshape2
     - r-rmarkdown
     - r-seqinr
+    - r-xml2
     - r-yaml
 
 test:
