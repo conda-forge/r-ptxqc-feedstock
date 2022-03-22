@@ -34,9 +34,10 @@ requirements:
     - r-ggdendro
     - r-ggplot2 >=2.2
     - r-gtable
+    - r-htmltable
     - r-jsonlite
-    - r-kableextra
     - r-knitr >=1.10
+    - r-magrittr
     - r-ontologyindex
     - r-plyr
     - r-reshape2
@@ -54,9 +55,10 @@ requirements:
     - r-ggdendro
     - r-ggplot2 >=2.2
     - r-gtable
+    - r-htmltable
     - r-jsonlite
-    - r-kableextra
     - r-knitr >=1.10
+    - r-magrittr
     - r-ontologyindex
     - r-plyr
     - r-reshape2
@@ -78,6 +80,7 @@ about:
   license_family: BSD
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause
+    - LICENSE
 
 extra:
   recipe-maintainers:
