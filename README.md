@@ -5,7 +5,7 @@ Home: https://github.com/cbielow/PTXQC
 
 Package license: BSD-3-Clause
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ptxqc-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ptxqc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Generates Proteomics (PTX) quality control (QC) reports for shotgun LC-MS data analyzed with the  MaxQuant software suite. Reports are customizable (target thresholds, subsetting) and available in HTML or PDF format. Published in J. Proteome Res., Proteomics Quality Control: Quality Control Software for MaxQuant Results (2015) 'doi:10.1021/acs.jproteome.5b00780'.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7050&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-ptxqc-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7050&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-ptxqc-feedstock?branchName=main">
       </a>
     </td>
   </tr>
