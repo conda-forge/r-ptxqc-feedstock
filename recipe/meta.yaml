@@ -1,4 +1,4 @@
-{% set version = "1.0.14" %}
+{% set version = "1.0.15" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PTXQC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PTXQC/PTXQC_{{ version }}.tar.gz
-  sha256: 743570aaff6cddb16aa0b573088f1f6d114ac585a74453cf2e632d823d875db8
+  sha256: 2580a4b0433ac62338b1413c2fab8e30bcaf3a540d3453eccaadba81e82e691f
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -33,15 +33,15 @@ requirements:
     - r-data.table
     - r-ggdendro
     - r-ggplot2 >=2.2
+    - r-gridextra
     - r-gtable
     - r-htmltable
-    - r-jsonlite
     - r-knitr >=1.10
     - r-magrittr
-    - r-ontologyindex
     - r-plyr
     - r-reshape2
     - r-rmarkdown
+    - r-rmzqc >=0.4.2
     - r-seqinr
     - r-xml2
     - r-yaml
@@ -54,15 +54,15 @@ requirements:
     - r-data.table
     - r-ggdendro
     - r-ggplot2 >=2.2
+    - r-gridextra
     - r-gtable
     - r-htmltable
-    - r-jsonlite
     - r-knitr >=1.10
     - r-magrittr
-    - r-ontologyindex
     - r-plyr
     - r-reshape2
     - r-rmarkdown
+    - r-rmzqc >=0.4.2
     - r-seqinr
     - r-xml2
     - r-yaml
