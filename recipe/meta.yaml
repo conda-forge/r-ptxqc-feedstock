@@ -1,4 +1,4 @@
-{% set version = "1.0.15" %}
+{% set version = "1.0.16" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PTXQC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PTXQC/PTXQC_{{ version }}.tar.gz
-  sha256: 2580a4b0433ac62338b1413c2fab8e30bcaf3a540d3453eccaadba81e82e691f
+  sha256: 29d465c1ed6a0b506a0c8b66212545035ad40729194d0fc6126cebcab9fcb85c
 
 build:
   merge_build_host: true  # [win]
@@ -75,8 +75,8 @@ test:
 about:
   home: https://github.com/cbielow/PTXQC
   license: BSD-3-Clause
-  summary: "Generates Proteomics (PTX) quality control (QC) reports for shotgun LC-MS data analyzed with the  MaxQuant software suite. Reports are customizable (target thresholds, subsetting) and available in HTML or PDF format. Published in J. Proteome Res., Proteomics Quality Control: Quality Control Software for MaxQuant\
-    \ Results (2015) 'doi:10.1021/acs.jproteome.5b00780'."
+  summary: "Generates Proteomics (PTX) quality control (QC) reports for shotgun LC-MS data analyzed with the  MaxQuant software suite. Reports are customizable (target thresholds, subsetting) and available in HTML or PDF format. Published in J. Proteome Res., Proteomics Quality Control: Quality Control Software for MaxQuant
+    Results (2015) 'doi:10.1021/acs.jproteome.5b00780'."
   license_family: BSD
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause
