@@ -1,4 +1,4 @@
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PTXQC_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PTXQC/PTXQC_{{ version }}.tar.gz
-  sha256: 753412c2b0853dbe5f696ffd22deee336a6123ccc3f5ea21a404989572eca520
+  sha256: 370af5939e5f53cd609a800872367239851efbe3e1d91be5ececae99f42e82fc
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
